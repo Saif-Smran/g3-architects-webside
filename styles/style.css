@@ -1,17 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     /* margin: 0;
     padding: 0; */
     font-family: "Work Sans", serif;
 }
 
-body{
+body {
     margin: 0;
 }
 
 
 /* Shared styles */
+
+main > section{
+    margin-top: 130px;
+}
+
+.navbar,
+.banner,
+main,
+footer {
+    max-width: 1440px;
+    margin: 0 auto;
+}
 
 .flex {
     display: flex;
@@ -29,11 +41,19 @@ body{
     color: #727272;
 }
 
+.color-1 {
+    color: #FF900E;
+}
+
+.medium{
+    font-weight: 500;
+}
+
 .btn-primary {
     background-color: #FF900E;
     color: #FFFFFF;
     border-radius: 8px;
-    font-weight:600;
+    font-weight: 600;
     font-size: 1.25rem;
     border: none;
     padding: 20px 24px;
@@ -45,16 +65,16 @@ body{
     background-color: #FFA53E;
 }
 
+.brand,
+.section-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
 /* Header Styles */
 
 .header {
     background-color: rgba(255, 144, 14, 0.1);
-}
-
-.navbar,
-.banner {
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 /* Navber Styles */
@@ -64,10 +84,6 @@ body{
     align-items: center;
 }
 
-.brand {
-    font-size: 2.8rem;
-    font-weight: bold;
-}
 
 .nav-links {
     gap: 20px;
@@ -93,20 +109,70 @@ body{
     text-align: center;
 }
 
-.banner-title{
+.banner-title {
     font-weight: bold;
     font-size: 4rem;
     margin-bottom: 0px;
 }
 
-.banner-img{
+.banner-img {
     width: 100%;
 }
+
+/* Teams section */
+
+.teams {
+    align-items: center;
+    gap: 70px;
+}
+
+.teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.teams-comtent{
+    max-width: 537px;
+}
+
 
 /* Responsice media quary */
 
 @media screen and (max-width: 564px) {
-    .navbar,.nav-links {
+
+    .navbar,
+    .nav-links,
+    .teams {
+        flex-direction: column;
+    }
+
+    .teams-img-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .teams-comtent{
+        margin-left: 25px;
+    }
+}
+
+
+/* Some Facts */
+
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 565px) and (max-width: 992px) {
+    
+    .teams {
         flex-direction: column;
     }
     
